@@ -6,109 +6,19 @@
   <title>FashionPro | Guia para Vender Roupas</title>
   <meta name="description" content="FashionPro — Guia completo para começar a vender roupas com estratégia, presença digital e técnicas de venda." />
   <meta name="theme-color" content="#0f0f0f" />
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://enzin7438-cyber.github.io/fashionpro/">
   <!-- Open Graph -->
   <meta property="og:title" content="FashionPro | Guia para Vender Roupas">
   <meta property="og:description" content="Aprenda a iniciar, divulgar e vender roupas com estratégia e profissionalismo.">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1521335629791-ce4aec67dd47">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1521335629791-ce4aec67dd47?q=80&w=1200&auto=format&fit=crop">
   <meta property="og:type" content="website">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#0f0f0f;
-      --card:#121212;
-      --muted:#cfcfcf;
-      --accent:#ffffff;
-      --accent-2:#ff6b6b;
-      --glass: rgba(255,255,255,0.04);
-      --radius:18px;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:'Poppins',sans-serif;
-      background:var(--bg);
-      color:var(--muted);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.5;
-    }
+  <meta name="twitter:card" content="summary_large_image">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="no-referrer-when-downgrade">
 
-    /* NAV */
-    .nav{
-      position:fixed;
-      left:0;right:0;top:0;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:12px 28px;
-      background:linear-gradient(180deg, rgba(0,0,0,0.55), transparent);
-      backdrop-filter: blur(6px);
-      z-index:40;
-    }
-    .logo{font-weight:700;font-size:1.05rem;color:var(--accent);letter-spacing:0.6px}
-    .nav-links{display:flex;gap:16px;align-items:center}
-    .nav-links a{color:var(--muted);text-decoration:none;font-weight:600;font-size:0.95rem;padding:8px 12px;border-radius:12px;transition:0.18s}
-    .nav-links a:hover{background:var(--glass);color:var(--accent)}
-
-    /* HERO */
-    .hero{
-      min-height:88vh;
-      display:flex;
-      align-items:center;
-      padding:110px 6% 60px;
-      background:linear-gradient(120deg, rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://images.unsplash.com/photo-1521335629791-ce4aec67dd47') center/cover no-repeat;
-      text-align:left;
-    }
-    .hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 420px;gap:36px;align-items:center}
-    .hero h1{font-size:2.6rem;margin:0;color:white;line-height:1.02}
-    .hero p{color:#e6e6e6;opacity:0.95;margin:16px 0 24px;font-size:1rem}
-    .cta{display:flex;gap:12px}
-    .btn{padding:12px 22px;border-radius:999px;background:#fff;color:#000;text-decoration:none;font-weight:700;transition:0.18s}
-    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.12);color:var(--muted)}
-
-    /* CARD GRID */
-    .section{padding:72px 6%}
-    .title{font-size:1.9rem;margin-bottom:18px;color:#fff}
-    .lead{max-width:880px;color:#dcdcdc;opacity:0.95;margin-bottom:28px}
-
-    .grid{display:grid;gap:20px}
-    .features{grid-template-columns:repeat(auto-fit,minmax(240px,1fr));}
-    .card{background:var(--card);padding:20px;border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,0.5)}
-    .card h3{margin:0 0 8px;color:#fff}
-    .card p{margin:0;color:#cfcfcf;opacity:0.95}
-
-    /* GALLERY */
-    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
-    .gallery img{width:100%;height:160px;object-fit:cover;border-radius:12px}
-
-    /* TESTIMONIALS */
-    .testimonials{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    .testimonial{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:14px}
-    .testimonial p{font-style:italic}
-
-    /* BLOG */
-    .posts{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-    .post{overflow:hidden;border-radius:12px;background:var(--card)}
-    .post img{width:100%;height:140px;object-fit:cover;display:block}
-    .post .meta{padding:12px}
-
-    /* CONTACT */
-    .contact-grid{display:grid;grid-template-columns:1fr 360px;gap:24px}
-    .form input,.form textarea{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--muted);resize:vertical}
-    .form label{display:block;margin-bottom:8px;font-weight:600;color:#fff}
-    .form button{margin-top:8px;padding:12px 16px;border-radius:10px;border:none;background:var(--accent-2);color:#fff;font-weight:700}
-
-    /* FOOTER */
-    footer{padding:36px 6%;background:#050505;margin-top:36px;border-top:1px solid rgba(255,255,255,0.03)}
-    footer .foot-grid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
-
-    @media (max-width:900px){
-      .hero-inner{grid-template-columns:1fr}
-      .contact-grid{grid-template-columns:1fr}
-      .testimonials{grid-template-columns:1fr}
-    }
-  </style>
+  <link href="/styles.css" rel="stylesheet">
 </head>
 <body>
   <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -132,18 +42,18 @@
           <a class="btn secondary" href="#contato">Fale com a gente</a>
         </div>
 
-        <div style="margin-top:22px;color:#d0d0d0;font-size:0.95rem">
+        <div class="highlights">
           <strong>Destaques:</strong> Nicho, fornecedores, presença digital, técnicas de venda e pós-venda.
         </div>
       </div>
 
       <aside class="card" aria-hidden="false">
-        <h3 style="margin-top:0">Roteiro Rápido</h3>
-        <p style="margin-bottom:10px">1. Escolha um nicho → 2. Encontre fornecedores → 3. Crie presença online → 4. Venda com valor.</p>
-        <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
-          <span style="font-size:0.85rem;padding:8px 10px;background:rgba(255,255,255,0.03);border-radius:8px">Instagram</span>
-          <span style="font-size:0.85rem;padding:8px 10px;background:rgba(255,255,255,0.03);border-radius:8px">WhatsApp</span>
-          <span style="font-size:0.85rem;padding:8px 10px;background:rgba(255,255,255,0.03);border-radius:8px">TikTok</span>
+        <h3>Roteiro Rápido</h3>
+        <p>1. Escolha um nicho → 2. Encontre fornecedores → 3. Crie presença online → 4. Venda com valor.</p>
+        <div class="tags">
+          <span>Instagram</span>
+          <span>WhatsApp</span>
+          <span>TikTok</span>
         </div>
       </aside>
     </div>
@@ -169,7 +79,7 @@
       </div>
     </section>
 
-    <section id="como-vender" class="section" style="padding-top:12px">
+    <section id="como-vender" class="section">
       <h2 class="title">Como Vender Melhor</h2>
       <p class="lead">Técnicas práticas para transformar interesse em venda: script de atendimento, anúncios eficazes e fidelização.</p>
       <div class="grid features">
@@ -192,10 +102,10 @@
       <h2 class="title">Galeria</h2>
       <p class="lead">Inspire-se com editoriais, combinações e fotos profissionais que ajudam a vender melhor.</p>
       <div class="gallery">
-        <img src="https://images.unsplash.com/photo-1520975912861-8b6b3f8d0f27" alt="look 1">
-        <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246" alt="look 2">
-        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1" alt="look 3">
-        <img src="https://images.unsplash.com/photo-1541534401786-3f1f5b5b5f5f" alt="look 4">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1520975912861-8b6b3f8d0f27?q=80&w=800&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1520975912861-8b6b3f8d0f27?q=80&w=400&auto=format&fit=crop 400w, https://images.unsplash.com/photo-1520975912861-8b6b3f8d0f27?q=80&w=800&auto=format&fit=crop 800w" alt="Look streetwear"/>
+        <img loading="lazy" src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=800&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=400&auto=format&fit=crop 400w, https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=800&auto=format&fit=crop 800w" alt="Look casual"/>
+        <img loading="lazy" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=400&auto=format&fit=crop 400w, https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop 800w" alt="Editorial fashion"/>
+        <img loading="lazy" src="https://images.unsplash.com/photo-1541534401786-3f1f5b5b5f5f?q=80&w=800&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1541534401786-3f1f5b5b5f5f?q=80&w=400&auto=format&fit=crop 400w, https://images.unsplash.com/photo-1541534401786-3f1f5b5b5f5f?q=80&w=800&auto=format&fit=crop 800w" alt="Combinações de roupas"/>
       </div>
     </section>
 
@@ -205,31 +115,31 @@
       <div class="testimonials">
         <div class="testimonial card">
           <p>"Apliquei as dicas de nicho e subi meu faturamento em 40% no primeiro mês."</p>
-          <strong style="display:block;margin-top:10px">— Marina, empreendedora</strong>
+          <strong>— Marina, empreendedora</strong>
         </div>
         <div class="testimonial card">
           <p>"As estratégias de conteúdo e script de venda simplificaram meu processo e converteram mais clientes."</p>
-          <strong style="display:block;margin-top:10px">— Carlos, dono de loja</strong>
+          <strong>— Carlos, dono de loja</strong>
         </div>
       </div>
     </section>
 
     <section id="novidades" class="section">
       <h2 class="title">Novidades / Blog</h2>
-      <p class="lead">Artigos rápidos com técnicas acionáveis para melhorar suas vendas hoje.</p>
       <div class="posts">
         <article class="post">
-          <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb" alt="post 1">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?q=80&w=800&auto=format&fit=crop" alt="Como fotografar peças"/>
           <div class="meta">
-            <h3 style="margin:0;color:#fff">Como fotografar peças que vendem</h3>
-            <p style="margin:8px 0 0;color:#cfcfcf;font-size:0.95rem">Dicas práticas para fotos com celular: iluminação, enquadramento e edição rápida.</p>
+            <h3>Como fotografar peças que vendem</h3>
+            <p>Dicas práticas para fotos com celular: iluminação, enquadramento e edição rápida.</p>
           </div>
         </article>
+
         <article class="post">
-          <img src="https://images.unsplash.com/photo-1520975669045-97c2c3b2b7a9" alt="post 2">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1520975669045-97c2c3b2b7a9?q=80&w=800&auto=format&fit=crop" alt="Scripts de atendimento"/>
           <div class="meta">
-            <h3 style="margin:0;color:#fff">3 scripts de atendimento que convertem</h3>
-            <p style="margin:8px 0 0;color:#cfcfcf;font-size:0.95rem">Modelos de mensagens para WhatsApp e Direct que ajudam a fechar a venda.</p>
+            <h3>3 scripts de atendimento que convertem</h3>
+            <p>Modelos de mensagens para WhatsApp e Direct que ajudam a fechar a venda.</p>
           </div>
         </article>
       </div>
@@ -237,10 +147,10 @@
 
     <section id="contato" class="section">
       <h2 class="title">Contato</h2>
-      <p class="lead">Tem dúvidas ou quer suporte personalizado? Envie uma mensagem.</p>
+      <p class="lead">Tem dúvidas ou quer suporte personalizado? Envie uma mensagem para nosso e-mail.</p>
       <div class="contact-grid">
         <div class="form card">
-          <form id="contactForm" onsubmit="return handleForm(event)">
+          <form id="contactForm">
             <label for="name">Nome</label>
             <input id="name" name="name" required placeholder="Seu nome">
 
@@ -251,18 +161,17 @@
             <textarea id="message" name="message" rows="5" required placeholder="Como podemos ajudar?"></textarea>
 
             <button type="submit">Enviar Mensagem</button>
-            <div id="formMsg" style="margin-top:8px;font-size:0.95rem;color:#bdbdbd"></div>
+            <div id="formMsg" class="form-msg" aria-live="polite"></div>
           </form>
         </div>
 
         <div class="card" style="align-self:start">
           <h3>Outras formas de contato</h3>
-          <p style="margin-top:8px">WhatsApp: <strong>+55 11 9XXXX-XXXX</strong></p>
-          <p>Email: <strong>contato@fashionpro.exemplo</strong></p>
+          <p>Email: <strong>fashionprovendas@gmail.com</strong></p>
 
-          <h4 style="margin-top:14px">Boletim</h4>
-          <p style="margin-bottom:10px">Assine para receber dicas semanais.</p>
-          <input placeholder="Seu email" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--muted)">
+          <h4>Boletim</h4>
+          <p>Assine para receber dicas semanais.</p>
+          <input placeholder="Seu email" class="newsletter-input" aria-label="Seu email para boletim">
         </div>
       </div>
     </section>
@@ -272,30 +181,23 @@
     <div class="foot-grid">
       <div>
         <strong>FashionPro</strong>
-        <div style="margin-top:8px;color:#bfbfbf;font-size:0.95rem">Guia profissional para vendas de roupas — © 2026</div>
+        <div class="muted">Guia profissional para vendas de roupas — © 2026</div>
       </div>
-      <div style="color:#bfbfbf">Desenvolvido com ❤️ • Siga-nos nas redes</div>
+      <div class="muted">Desenvolvido com ❤️ • Siga-nos nas redes</div>
     </div>
   </footer>
 
-  <script>
-    function handleForm(e){
-      e.preventDefault();
-      const msg = document.getElementById('formMsg');
-      msg.textContent = 'Obrigado! Mensagem recebida (simulação). Em breve responderemos.';
-      return false;
-    }
-    // Smooth scroll for in-page links
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click',function(ev){
-        const href = this.getAttribute('href');
-        if(href.length>1){
-          ev.preventDefault();
-          const el = document.querySelector(href);
-          if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
-        }
-      });
-    });
+  <script src="/script.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "FashionPro",
+    "url": "https://enzin7438-cyber.github.io/fashionpro/",
+    "email": "mailto:fashionprovendas@gmail.com",
+    "logo": "https://enzin7438-cyber.github.io/fashionpro/favicon.svg"
+  }
   </script>
 </body>
 </html>
